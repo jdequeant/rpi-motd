@@ -29,7 +29,7 @@ echo "${BOLD}${GREEN}
    .~ .~~~..~.    
   : .~.'~'.~. :   ${YELLOW}Uptime.............: ${REGULAR}${CYAN}${UPTIME}${RED}${BOLD}
  ~ (   ) (   ) ~  ${YELLOW}Memory.............: ${REGULAR}${CYAN}${memallocated}/${memtotal}MB${RED}${BOLD}
-( : '~'.~.'~' : ) ${YELLOW}Load Averages......: ${REGULAR}${CYAN}${one} ${five} ${fifteen} (1 5 15 min)${RED}${BOLD}
+( : '~'.~.'~' : ) ${YELLOW}Load Averages......: ${REGULAR}${CYAN}${one} ${five} ${fifteen} (1,5,15 min)${RED}${BOLD}
  ~ .~ (   ) ~. ~  ${YELLOW}Running Processes..: ${REGULAR}${CYAN}`ps ax | wc -l | tr -d " "`${RED}${BOLD}
   (  : '~' :  )   ${YELLOW}Local IP...........: ${REGULAR}${CYAN}`/sbin/ifconfig eth0 | /bin/grep "inet addr" | /usr/bin/cut -d ":" -f 2 | /usr/bin/cut -d " " -f 1`${RED}${BOLD}
    '~ .~~~. ~'    ${YELLOW}Public IP .........: ${REGULAR}${CYAN}`wget -q -O - http://icanhazip.com/ | tail`${RED}${BOLD}
