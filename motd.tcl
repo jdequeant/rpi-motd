@@ -31,7 +31,7 @@ echo "${BOLD}${GREEN}
  ~ (   ) (   ) ~  ${YELLOW}Memory.............: ${REGULAR}${CYAN}${memallocated}/${memtotal}MB${RED}${BOLD}
 ( : '~'.~.'~' : ) ${YELLOW}Load Averages......: ${REGULAR}${CYAN}${one}, ${five}, ${fifteen} (1, 5, 15 min)${RED}${BOLD}
  ~ .~ (   ) ~. ~  ${YELLOW}Running Processes..: ${REGULAR}${CYAN}`ps ax | wc -l | tr -d " "`${RED}${BOLD}
-  (  : '~' :  )   ${YELLOW}IP Addresses.......: ${REGULAR}${CYAN}`/sbin/ifconfig eth0 | /bin/grep "inet addr" | /usr/bin/cut -d ":" -f 2 | /usr/bin/cut -d " " -f 1` and `wget -q -O - http://icanhazip.com/ | tail`${RED}${BOLD}
-   '~ .~~~. ~'    ${YELLOW}Weather............: ${REGULAR}${CYAN}`curl -s "http://rss.accuweather.com/rss/liveweather_rss.asp?metric=1&locCode=EUR|FR|FR001|NANTES|" | sed -n '/Currently:/ s/.*: \(.*\): \([0-9]*\)\([CF]\).*/\2°\3, \1/p'`${RED}${BOLD}
-       '~'
+  (  : '~' :  )   ${YELLOW}Local IP...........: ${REGULAR}${CYAN}`/sbin/ifconfig eth0 | /bin/grep "inet addr" | /usr/bin/cut -d ":" -f 2 | /usr/bin/cut -d " " -f 1`${RED}${BOLD}
+   '~ .~~~. ~'    ${YELLOW}Public IP .........: ${REGULAR}${CYAN}`wget -q -O - http://icanhazip.com/ | tail`${RED}${BOLD}
+       '~'        ${YELLOW}Weather............: ${REGULAR}${CYAN}`curl -s "http://rss.accuweather.com/rss/liveweather_rss.asp?metric=1&locCode=EUR|FR|FR001|NANTES|" | sed -n '/Currently:/ s/.*: \(.*\): \([0-9]*\)\([CF]\).*/\2°\3, \1/p'`${RED}${BOLD}
 ${REGULAR}"
