@@ -1,4 +1,18 @@
 # rpi-motd
+## PREREQUISITES:
+TCLSH: View if you have tclsh installed:
+```bash
+dpkg -l | grep tcl
+```
+Reply if you do have it installed will be similar to:
+```bash
+tcl8.5  8.5.3-2  Tcl (the Tool Command Language) v8.5 - run-t
+tcl8.5-dev  8.5.3-2  Tcl (the Tool Command Language) v8.5 - devel
+```
+If not:
+```bash
+sudo apt install tcl
+```
 ## Installation
 ```bash
 cd rpi-motd
