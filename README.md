@@ -17,7 +17,9 @@ sudo apt install tcl
 ```bash
 cd rpi-motd
 cp motd.tcl /etc/motd.tcl
+# Backup current motd
 cp /etc/motd /etc/motd.bak
+# Empty current motd
 echo | sudo tee /etc/motd
 echo "/etc/motd.tcl" | sudo tee -a /etc/profile
 ```
